@@ -19,7 +19,7 @@ describe('normalize query params', function() {
     });
   });
   
-  it('should normalize configured params', function(done) {
+  it('should normalize configured params when params have identical casing', function(done) {
     normalizeQueryParams(['someparam'])(req, null, function() {
       expect(req.query.sompparam).to.equal(5);
       done();
